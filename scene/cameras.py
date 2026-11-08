@@ -176,3 +176,6 @@ def sample_cam(cam_l: Camera, cam_r: Camera):
     cam.full_proj_transform = (cam.world_view_transform.unsqueeze(0).bmm(cam.projection_matrix.unsqueeze(0))).squeeze(0)
     cam.camera_center = cam.world_view_transform.inverse()[3, :3]
     return cam
+
+    def print(self):
+        print("hello")
