@@ -28,3 +28,6 @@ class AppModel(nn.Module):
         weights_path = os.path.join(model_path, "app_model/iteration_{}/app.pth".format(loaded_iter))
         state_dict = torch.load(weights_path)
         self.load_state_dict(state_dict)
+
+    def print(self):
+        print("hello")
